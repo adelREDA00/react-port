@@ -6,6 +6,7 @@ import { Route,Routes, useLocation } from 'react-router-dom'
 import Portfolio from './pages/Portfolio'
 import Services from './pages/Services'
 import { AnimatePresence } from 'framer-motion'
+import ScrollToTop from './comp/ScrolToTop'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div >
     <AnimatePresence  mode='wait'  >
+      <ScrollToTop/>
     <Routes location= {location} key={location.pathname}>
       <Route path='/' element={<Lyout />}>
       <Route index element={<Home />}/>

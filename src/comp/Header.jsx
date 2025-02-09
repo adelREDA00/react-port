@@ -1,8 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
+//nav link class activation
+  const location = useLocation();
+
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
+  
   const [change , setChange] = useState(false)
 
 
@@ -22,8 +30,7 @@ const Handlenav = ()=>{
 //fix the line when you are in page
 const [line , setLine] = useState(null)
 
-const handleClose = (e)=>{
-window.scrollTo(0, 0);
+const handleClose = ()=>{
 navRef.current.classList.remove("active")
 setChange(!change)
 }
@@ -36,8 +43,7 @@ const activeHeader = function () {
 window.addEventListener("scroll", activeHeader);
 
   return (
-    <motion.div initial={{ y: -30, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
+    <div
      >
         <header ref={headRef} className="header" data-header>
     <div className="container">
@@ -50,20 +56,20 @@ window.addEventListener("scroll", activeHeader);
         <ul className="navbar-list">
 
           <li className="navbar-item">
-          <Link onClick={handleClose}  to={'/'} className={`label-lg navbar-link has-after `}>
-          HOME
+          <Link onClick={handleClose}  to={'/'} className={`label-lg navbar-link has-after ${url ==="/" ? 'active' : ''}  `}>
+          ACCUEIL
           </Link>
           </li>
 
           <li className="navbar-item">
-          <Link onClick={handleClose}  to={'/services'} className={`label-lg navbar-link has-after  `}>
-          services
+          <Link onClick={handleClose}  to={'/services'} className={`label-lg navbar-link has-after ${url ==="/services" ? 'active' : ''}  `}>
+          SERVICES
           </Link>
           </li>
 
           <li className="navbar-item">
-          <Link onClick={handleClose}  to={'/portfolio'} className={`label-lg navbar-link has-after  `}>
-          Portfolio
+          <Link onClick={handleClose}  to={'/portfolio'} className={`label-lg navbar-link has-afte ${url ==="/portfolio" ? 'active' : ''}  `}>
+          Projets
           </Link>
           </li>
 
@@ -89,7 +95,7 @@ window.addEventListener("scroll", activeHeader);
   </header>
 
 
-    </motion.div>
+    </div>
   )
 }
 

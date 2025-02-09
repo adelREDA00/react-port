@@ -264,10 +264,6 @@
 
 
 
-
-
-/*-----------------------------------*\
-  #TESTIMONIALS
 .testi .slider-item {
   min-width: 100%;
   scroll-margin-inline-start: 16px;
@@ -303,7 +299,7 @@
   border-radius: var(--radius-pill);
 }
 .testi .slider::-webkit-scrollbar-button { width: calc(25% - 20px); }
-\*-----------------------------------*/
+
 
 
 /*-----------------------------------*\
@@ -446,3 +442,25 @@
 .blink{
   color: blue;
  }
+
+
+ .hero-banner{
+    animation: float-juice 4s ease-in-out infinite;
+ }
+
+/* Animation juice */
+@keyframes float-juice {
+  0% {
+    transform: translateY(0) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(-1.3rem) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(1deg);
+  }
+}
+
+

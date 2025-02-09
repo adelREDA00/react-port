@@ -14,6 +14,7 @@
     box-shadow: 0 0 0 var(--jet);
     display: flex;
     transition: var(--transition-1);
+    cursor: pointer;
   }
   
   .card-md:is(:hover, :focus-within) { box-shadow: 5px 5px 0 var(--jet); }
@@ -22,8 +23,8 @@
     box-shadow: 3px 3px 0 var(--jet);
   }
   
-  .card,
-  .card-media { border: 2px solid var(--jet); }
+  .card { border: 2px solid var(--jet); }
+
   
   .card-lg { padding: 25px; }
   
@@ -88,6 +89,7 @@
    */
   
   @media (min-width: 768px) {
+
   
     .card-lg { padding: 35px; }
   
@@ -96,3 +98,8 @@
     .card-sm { padding: 15px; }
   
   }
+
+
+
+ 
+

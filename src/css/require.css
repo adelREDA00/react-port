@@ -38,7 +38,7 @@
   --maximum-yellow-red: hsl(41, 99%, 64%);
   --orange-red_a20: hsla(19, 100%, 55%, 0.2);
   --eerie-black: hsl(210, 11%, 15%);
-  --orange-red: #000000;
+  --orange-red: #0B080F;
   --davys-gray: hsl(0, 0%, 33%);
   --white_a80: hsla(0, 0%, 100%, 0.8);
   --white_a75: hsla(0, 0%, 100%, 0.75);
@@ -55,7 +55,7 @@
   --ff-jost: 'Jost', sans-serif;
 
   --fs-45: 4.5rem;
-  --fs-38: 3.8rem;
+  --fs-38: 2.8rem;
   --fs-32: 3.2rem;
   --fs-27: 2.7rem;
   --fs-26: 2.6rem;
@@ -114,7 +114,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
+
 
 li { list-style: none; }
 
@@ -252,7 +254,6 @@ body {
 .img-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .has-bg-image {
@@ -689,4 +690,25 @@ body {
     margin-inline: auto;
   }
 
+}
+
+.first-element{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  background-color: #FFC69A;
+}
+
+.first-element.sec{
+  z-index: 15;
+  background-color: #FFD69D;
+}
+.first-element.thr{
+  z-index: 10;
+
+    background-color: #FFE4AA;
 }

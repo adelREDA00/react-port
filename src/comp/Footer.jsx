@@ -36,7 +36,7 @@ const Footer = () => {
 
       </ul>
 
-      <p className="text-center">&copy; 2023 copyright all right reserved</p>
+      <p className="text-center">&copy; 2024 copyright all right reserved</p>
 
     </div>
   </footer>
